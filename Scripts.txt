@@ -1,0 +1,41 @@
+-- Table: public.compras
+
+-- DROP TABLE public.compras;
+
+CREATE TABLE public.compras
+(
+    nombre text COLLATE pg_catalog."default" NOT NULL,
+    edad text COLLATE pg_catalog."default" NOT NULL,
+    sexo text COLLATE pg_catalog."default" NOT NULL,
+    id text COLLATE pg_catalog."default" NOT NULL,
+    fecha date NOT NULL
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.compras
+    OWNER to postgres;
+
+--------------------------------------------------------------------------------------------
+
+-- Table: public.productos
+
+-- DROP TABLE public.productos;
+
+CREATE TABLE public.productos
+(
+    id text COLLATE pg_catalog."default" NOT NULL,
+    nombre text COLLATE pg_catalog."default" NOT NULL,
+    precio text COLLATE pg_catalog."default" NOT NULL,
+    tipo text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT productos_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.productos
+    OWNER to postgres;
